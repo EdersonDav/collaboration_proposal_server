@@ -4,18 +4,16 @@ import { validNumbers } from '../helper/validNumbers';
 
 export class BenefitsCalculationController {
   public async benefitsCalculation(req: Request, res: Response) {
-    const { numberFamilyMenbers, healthInsurance } = req.body;
+    const { numberFamilyMembers, healthInsurance } = req.body;
 
-    if (!validNumbers(numberFamilyMenbers) || !validNumbers(healthInsurance)) {
+    if (!validNumbers(numberFamilyMembers) || !validNumbers(healthInsurance)) {
       return res.status(400).json({ message: "All fields are mandatory" });
     }
 
-    const benefitsCalculationService = new BenefitsCalculationService(numberFamilyMenbers, healthInsurance);
+    const benefitsCalculationService = new BenefitsCalculationService(numberFamilyMembers, healthInsurance);
 
-    const data = {
-      familyMenbersValue: benefitsCalculationService.getFamilyMenbersValue()
-    }
+    const familyMenbersValue = benefitsCalculationService.getFamilyMenbersValue()
 
-    return res.json(data);
+    return res.json(familyMenbersValue);
   }
 }

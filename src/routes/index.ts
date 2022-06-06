@@ -6,7 +6,7 @@ import { financialCalculationRoutes } from './financialCalculation.routes';
 
 const router = Router();
 
-router.use("/roposal", collaborationProposalRoutes)
+router.use("/proposal", collaborationProposalRoutes)
 router.use("/finantial", financialCalculationRoutes)
 router.use("/benefits", benefitsCalculationRoutes)
 

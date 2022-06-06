@@ -1,8 +1,6 @@
 export class FinancialCalculationService {
   private baseValue: number;
   private workScheduleExemption: number;
-
-  private vacationsChristmasTwelfth!: number;
   private workScheduleExemptionValue!: number;
 
   constructor(baseValue: number, workScheduleExemption: number) {
@@ -14,18 +12,21 @@ export class FinancialCalculationService {
     this.workScheduleExemptionValue = this.baseValue * (this.workScheduleExemption / 100);
   }
 
-  private vacationsChristmasTwelfthCalculation() {
-    this.vacationsChristmasTwelfth = (this.baseValue + this.workScheduleExemptionValue) / 12;
+  private vacationsTwelfthCalculation() {
+    return (this.baseValue + this.workScheduleExemptionValue) / 12;
   }
 
+  private christmasTwelfthCalculation() {
+    return (this.baseValue + this.workScheduleExemptionValue) / 12;
+  }
 
   public getWorkVacationAndChristmasVales() {
-    this.workScheduleExemptionValueCalculation();
-    this.vacationsChristmasTwelfthCalculation();
+    this.workScheduleExemptionValueCalculation()
 
     return {
-      vacationsChristmasTwelfth: this.vacationsChristmasTwelfth,
-      workScheduleExemptionValue: this.workScheduleExemption
+      workScheduleExemptionValue: this.workScheduleExemptionValue,
+      vacationsTwelfth: this.vacationsTwelfthCalculation(),
+      christmasTwelfth: this.christmasTwelfthCalculation(),
     }
   }
 
