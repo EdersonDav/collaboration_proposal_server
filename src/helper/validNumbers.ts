@@ -1,0 +1,1 @@
+export const validNumbers = (value: any) => !!(value && !isNaN(value))
