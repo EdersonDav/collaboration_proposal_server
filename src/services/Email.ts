@@ -22,20 +22,14 @@ export class Email {
     secure: false
   }
 
-  public sendEmail() {
+  public async sendEmail() {
     const transport = nodemailer.createTransport(this.configProduction);
-
-    transport.sendMail({
+    await transport.sendMail({
       from: `Proposta de Colaboração <${this.configProduction.auth.user}>`,
       to: this.proposalResume.email,
       subject: 'Proposta de Colaboração',
       html: this.generateHTMLEmail(),
       text: this.generateTextEmail()
-    }).then(() => {
-      console.log('Email send');
-
-    }).catch(err => {
-      throw new Error(err);
     })
   }
 
