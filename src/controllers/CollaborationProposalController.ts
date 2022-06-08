@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import { CollaborationProposalService } from '../services/CollaborationProposalService';
 
 export class CollaborationProposalController {
-  public async collaborationProposal(req: Request, res: Response) {
+  public collaborationProposal(req: Request, res: Response) {
     const proposalValuesContructor = req.body;
     const collaborationProposalService = new CollaborationProposalService(proposalValuesContructor);
 

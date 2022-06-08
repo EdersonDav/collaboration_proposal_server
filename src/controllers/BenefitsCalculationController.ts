@@ -3,7 +3,7 @@ import { BenefitsCalculationService } from '../services/BenefitsCalculationServi
 import { validNumbers } from '../helper/validNumbers';
 
 export class BenefitsCalculationController {
-  public async benefitsCalculation(req: Request, res: Response) {
+  public benefitsCalculation(req: Request, res: Response) {
     const { numberFamilyMembers, healthInsurance } = req.body;
 
     if (!validNumbers(numberFamilyMembers) || !validNumbers(healthInsurance)) {

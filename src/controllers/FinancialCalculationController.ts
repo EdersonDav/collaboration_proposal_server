@@ -3,7 +3,7 @@ import { validNumbers } from "../helper/validNumbers";
 import { FinancialCalculationService } from '../services/FinancialCalculationService';
 
 export class FinancialCalculationController {
-  public async financialCalculation(req: Request, res: Response) {
+  public financialCalculation(req: Request, res: Response) {
     const { baseValue, workScheduleExemption } = req.body;
 
     if (!validNumbers(workScheduleExemption) || !validNumbers(baseValue)) {

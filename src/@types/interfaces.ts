@@ -65,3 +65,37 @@ export interface IValuesConstructor {
 export interface ICostsConstructor {
   values: IValues;
 }
+
+export interface ProposalResume {
+  annualCosts: number;
+  anualBenefits: number;
+  anualGrossValue: number;
+  anualNetValue: number;
+  baseValue: number;
+  baseValueIRS: number;
+  baseValueSocialSecurity: number;
+  christmasAllowanceTwelfthAllowanceIRS: number;
+  christmasAllowanceTwelfthSocialSecurity: number;
+  christmasTwelfth: number;
+  collaborationStartDate: string;
+  communicationsPlafond: number;
+  dailyCosts: number;
+  email: string;
+  familyMembersValue: number;
+  healthInsurance: number;
+  includeFamilymembers: string;
+  irsTax: number;
+  monthlyBenefits: number;
+  monthlyCosts: number;
+  monthlyGrossValue: number;
+  monthlyNetValue: number;
+  name: string;
+  numberFamilyMembers: number;
+  otherExpenses: number;
+  remoteWorkAllowance: number;
+  vacationsAllowanceTwelfthAllowanceIRS: number;
+  vacationsAllowanceTwelfthSocialSecurity: number;
+  vacationsTwelfth: number;
+  workScheduleExemption: number;
+  workScheduleExemptionValue: number;
+}
