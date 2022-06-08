@@ -33,7 +33,7 @@
 
 `yarn`
 
-**Após a instalação de dependências é necessário a edição criação do arquivo `.env` na pasta rais do projeto com os valores de:**
+**Após a instalação de dependências é necessário a criação do arquivo `.env` na pasta raiz do projeto com os valores de:**
 
 ~~~javascript
 EMAIL_HOST= host do provedor de email (ex: smtp.office365.com )
