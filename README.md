@@ -106,7 +106,7 @@ Espera os valores:
 
 ~~~javascript
 {
-	"baseValue": number;
+  "baseValue": number;
   "workScheduleExemption": number;
   "workScheduleExemptionValue": number;
   "irsTax": number;
@@ -124,7 +124,7 @@ Para retorno de:
 
 ~~~javascript
 {
-	"deductions":{
+  "deductions":{
     "baseValueSocialSecurity": number,
     "christmasAllowanceTwelfthSocialSecurity": number,
     "vacationsAllowanceTwelfthSocialSecurity": number,
@@ -154,7 +154,7 @@ Espera os valores:
 
 ~~~javascript
 {
-	"annualCosts": number,
+  "annualCosts": number,
   "anualBenefits": number,
   "anualGrossValue": number,
   "anualNetValue": number,
