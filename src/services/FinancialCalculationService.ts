@@ -1,3 +1,5 @@
+import { formatNumber } from "../helper/formatNumber";
+
 export class FinancialCalculationService {
   private baseValue: number;
   private workScheduleExemption: number;
@@ -9,15 +11,15 @@ export class FinancialCalculationService {
   }
 
   private workScheduleExemptionValueCalculation() {
-    this.workScheduleExemptionValue = this.baseValue * (this.workScheduleExemption / 100);
+    this.workScheduleExemptionValue = formatNumber(this.baseValue * (this.workScheduleExemption / 100));
   }
 
   private vacationsTwelfthCalculation() {
-    return (this.baseValue + this.workScheduleExemptionValue) / 12;
+    return formatNumber((this.baseValue + this.workScheduleExemptionValue) / 12);
   }
 
   private christmasTwelfthCalculation() {
-    return (this.baseValue + this.workScheduleExemptionValue) / 12;
+    return formatNumber((this.baseValue + this.workScheduleExemptionValue) / 12);
   }
 
   public getWorkVacationAndChristmasVales() {

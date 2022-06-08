@@ -39,7 +39,7 @@ export interface IProposalConstructor {
   remoteWorkAllowance: number;
   communicationsPlafond: number;
   healthInsurance: number;
-  familyMenbersValue: number;
+  familyMembersValue: number;
 }
 
 export interface IDeductionsConstructor {

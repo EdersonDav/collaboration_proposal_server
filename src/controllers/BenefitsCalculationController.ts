@@ -10,10 +10,13 @@ export class BenefitsCalculationController {
       return res.status(400).json({ message: "All fields are mandatory" });
     }
 
-    const benefitsCalculationService = new BenefitsCalculationService(numberFamilyMembers, healthInsurance);
+    const benefitsCalculationService = new BenefitsCalculationService(
+      Number(numberFamilyMembers),
+      Number(healthInsurance)
+    );
 
-    const familyMenbersValue = benefitsCalculationService.getFamilyMenbersValue()
+    const familyMembersValue = benefitsCalculationService.getfamilyMembersValue()
 
-    return res.json(familyMenbersValue);
+    return res.json(familyMembersValue);
   }
 }

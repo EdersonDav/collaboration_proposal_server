@@ -10,7 +10,10 @@ export class FinancialCalculationController {
       return res.status(400).json({ message: "All fields are mandatory" });
     }
 
-    const financialCalculationService = new FinancialCalculationService(baseValue, workScheduleExemption);
+    const financialCalculationService = new FinancialCalculationService(
+      Number(baseValue),
+      Number(workScheduleExemption)
+    );
 
     const data = financialCalculationService.getWorkVacationAndChristmasVales()
 

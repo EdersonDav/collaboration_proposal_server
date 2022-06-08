@@ -2,6 +2,8 @@ import { IProposalConstructor, IProposalResult } from '../@types/interfaces';
 import { DeductionsService } from './DeductionsService';
 import { ValuesService } from './ValuesService';
 import { CostsService } from './CostsService';
+import { formatProposalNumbers } from '../helper/formatProposalNumbers';
+import { formatResult } from '../helper/formatResult';
 
 export class CollaborationProposalService {
   private proposalValuesContructor: IProposalConstructor
@@ -9,7 +11,7 @@ export class CollaborationProposalService {
   constructor(
     proposalValuesContructor: IProposalConstructor
   ) {
-    this.proposalValuesContructor = proposalValuesContructor
+    this.proposalValuesContructor = formatProposalNumbers(proposalValuesContructor)
   }
 
   public proposalResult(): IProposalResult {
@@ -32,9 +34,9 @@ export class CollaborationProposalService {
     const costs = costsService.getCosts();
 
     return {
-      costs,
-      deductions,
-      values
+      costs: formatResult(costs),
+      deductions: formatResult(deductions),
+      values: formatResult(values)
     }
   }
 

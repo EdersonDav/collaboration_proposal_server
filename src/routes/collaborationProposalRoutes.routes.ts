@@ -6,6 +6,6 @@ const collaborationProposalController = new CollaborationProposalController();
 
 const collaborationProposalRoutes = Router()
 
-collaborationProposalRoutes.get("/", collaborationProposalController.collaborationProposal)
+collaborationProposalRoutes.post("/", collaborationProposalController.collaborationProposal)
 
 export { collaborationProposalRoutes };

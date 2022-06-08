@@ -8,15 +8,15 @@ export class BenefitsCalculationService {
 
   }
 
-  private familyMenbersValueCalculation() {
+  private familyMembersValueCalculation() {
     return this.healthInsurance * this.numberFamilyMembers;
   }
 
-  public getFamilyMenbersValue() {
-    this.familyMenbersValueCalculation()
+  public getfamilyMembersValue() {
+    this.familyMembersValueCalculation()
 
     return {
-      familyMenbersValue: this.familyMenbersValueCalculation()
+      familyMembersValue: this.familyMembersValueCalculation()
     }
   }
 
