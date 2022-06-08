@@ -33,9 +33,9 @@
 
 `yarn`
 
-**Após a instalaçaõ de dependências é necessário a edição criação do arquivo `.env` na pasta rais do projeto com os valores de:**
+**Após a instalação de dependências é necessário a edição criação do arquivo `.env` na pasta rais do projeto com os valores de:**
 
-~~~bash
+~~~javascript
 EMAIL_HOST= host do provedor de email (ex: smtp.office365.com )
 EMAIL_USER= endereço de email que vai ser enviada a proposta 
 EMAIL_SENHA= senha do email que vai ser enviada a proposta 
